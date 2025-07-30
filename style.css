@@ -1,3 +1,4 @@
+/* Titolo pagina */
 .header {
       color: #e83a3a;
       text-align: center;
@@ -10,16 +11,12 @@
       text-align: center;
 }
 
-.col-lg-4,
-.col-md-8,
-.col-sm-12 {
+
+.team-item {
       display: flex;
-      flex-direction: row;
-      align-items: start;
-      justify-content: start;
-      text-align: left;
-
-
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
 }
 
 .team-card {
@@ -29,29 +26,58 @@
       padding: 1rem;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       color: aliceblue;
+      width: 100%;
+      max-width: 800px;
+      /* limite massimo */
+      overflow: hidden;
+      /* blocca contenuto extra */
+      word-wrap: break-word;
+      /* manda a capo parole troppo lunghe */
 }
 
+
+/* Immagine team */
+.team-card img {
+      width: 150px;
+      height: auto;
+      object-fit: contain;
+}
+
+/*  Descrizione membro */
+.team-info {
+      flex: 1;
+      text-align: left;
+      max-width: 500px;
+}
+
+/*  Container layout orizzontale */
 .team-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       gap: 2rem;
+      padding: 0 1rem;
 }
 
-.team-item {
-      display: flex;
-      align-items: start;
-      gap: 2rem;
-}
-
+/*  Reverse layout se serve */
 .team-item.reverse {
       flex-direction: row-reverse;
 }
 
-.team-info {
-      max-width: 400px;
-}
+/*  Mobile layout */
+@media (max-width: 768px) {
 
-img {
-      width: 150px;
-      height: 150px;
+      .team-item,
+      .team-card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+      }
+
+      .team-card img {
+            margin-bottom: 1rem;
+      }
+
+      .team-info {
+            text-align: center;
+      }
 }
