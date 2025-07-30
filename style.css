@@ -23,12 +23,12 @@
 }
 
 .team-card {
-      background-color: #f8f9fa;
+      background-color: #0c0c0c;
       border: 1px solid #dee2e6;
       border-radius: 0.5rem;
       padding: 1rem;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      color: aliceblue;
 }
 
 .team-container {
